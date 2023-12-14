@@ -56,7 +56,7 @@ export default function Home() {
 						</p>
 					</section>
 
-					<section>
+					<section className="max-w-3xl mt-2">
 						<strong>Onde mais me destaco:</strong>
 
 						<p className="flex justify-center items-center gap-2 flex-wrap" itemProp="knowsAbout">
@@ -155,7 +155,7 @@ export default function Home() {
 						</p>
 					</section>
 
-					<section>
+					<section className="max-w-3xl mt-8">
 						<strong>Onde me encontrar:</strong>
 
 						<div className="flex items-center justify-center gap-2">

@@ -1,10 +1,16 @@
-<a style="color:black" href="https://github.com/jrmarqueshd/jrmarqueshd/blob/main/README.pt-BR.md"><button style="border-radius: 2px;border:0">Ler em pt-BR <img src="https://cdn-icons-png.flaticon.com/512/330/330430.png" width="13"/></button></a>
+<a style="color:black" href="https://github.com/jrmarqueshd/jrmarqueshd/blob/main/README.en-US.md"><button style="border-radius: 2px;border:0">Read in en-US <img src="https://cdn-icons-png.flaticon.com/512/330/330459.png" width="13"/></button></a>
 
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
+<h1>Ei, bom te ver por aqui</h1>
 
-<p>Welcome to my page! </br> I'm Junior, Senior Frontend developer from <b>Diadema, São Paulo <img src="https://cdn-icons-png.flaticon.com/512/330/330430.png" width="13"/></b>.
+<p>Meu nome é Junior, tenho 30 anos, sou formado em Desenvolvimento de Sistemas e atualmente moro <b>Diadema, São Paulo <img src="https://cdn-icons-png.flaticon.com/512/330/330430.png" width="13"/></b>. Me tornei um desenvolvedor frontend ReactJS depois de encarar o desafio de continuar um projeto de e-commerce para um laboratório de exames médicos. Desde então, estou sempre estudando e aprimorando minhas habilidades em ReactJS para construir aplicações incríveis e super performáticas.</p>
 
-<h3>Things I code with:</h3>
+<p>Já participei de vários projetos em equipe, e sempre tento manter a comunicação bem clara e objetiva para que todos possam trabalhar juntos de maneira harmoniosa. Além disso, gosto de ajudar meus colegas de equipe e compartilhar meus conhecimentos.</p>
+
+<p>Para me manter atualizado sobre as novas tecnologias e tendências em desenvolvimento frontend ReactJS, gosto de participar de fóruns e assinar newsletters, além de assistir muitos vídeos no YouTube.</p>
+
+<p>O projeto mais desafiador que já participei foi a criação de um site para um grande time de futebol. Foi um desafio e tanto, mas com muita determinação e criatividade, conseguimos superar todos os obstáculos e entregar um projeto incrível!</p>
+
+<h3>Tecnologias que tenho familiaridades:</h3>
 <p>
   <img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
   <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />

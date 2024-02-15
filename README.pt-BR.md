@@ -2,7 +2,7 @@
 
 <h1>Ei, bom te ver por aqui</h1>
 
-<p>Meu nome é Junior, tenho 30 anos, sou formado em Desenvolvimento de Sistemas e atualmente moro <b>Diadema, São Paulo <img src="https://cdn-icons-png.flaticon.com/512/330/330430.png" width="13"/></b>. Me tornei um desenvolvedor frontend ReactJS depois de encarar o desafio de continuar um projeto de e-commerce para um laboratório de exames médicos. Desde então, estou sempre estudando e aprimorando minhas habilidades em ReactJS para construir aplicações incríveis e super performáticas.</p>
+<p>Meu nome é Junior, tenho 31 anos, sou formado em Desenvolvimento de Sistemas e atualmente moro <b>Diadema, São Paulo <img src="https://cdn-icons-png.flaticon.com/512/330/330430.png" width="13"/></b>. Me tornei um desenvolvedor frontend ReactJS depois de encarar o desafio de continuar um projeto de e-commerce para um laboratório de exames médicos. Desde então, estou sempre estudando e aprimorando minhas habilidades em ReactJS para construir aplicações incríveis e super performáticas.</p>
 
 <p>Já participei de vários projetos em equipe, e sempre tento manter a comunicação bem clara e objetiva para que todos possam trabalhar juntos de maneira harmoniosa. Além disso, gosto de ajudar meus colegas de equipe e compartilhar meus conhecimentos.</p>
 

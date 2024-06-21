@@ -10,13 +10,13 @@ export default function Policy() {
       <h2>Data Collection</h2>
       <p>The LocalStorage Catcher extension collects the following data:</p>
       <ul>
-        <li>Keys and values stored in your browser's LocalStorage.</li>
+        <li>Keys and values stored in your browsers LocalStorage.</li>
       </ul>
       <h2>Data Usage</h2>
       <p>The collected data is used for the following purposes:</p>
       <ul>
         <li>Analysis and debugging of web applications.</li>
-        <li>Improvement of the extension's functionality.</li>
+        <li>Improvement of the extensions functionality.</li>
       </ul>
       <h2>Data Sharing</h2>
       <p>

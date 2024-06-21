@@ -29,3 +29,37 @@ a {
 	overflow: hidden;
 	opacity: 0;
 }
+
+/* Geral */
+.terms {
+  background-color: #1e1e1e; /* Fundo principal */
+  color: #ffffff;            /* Texto principal */
+  padding: 20px;             /* Espaçamento interno */
+}
+
+/* Títulos */
+.terms h1, .terms h2 {
+  color: #ffffff;            /* Texto principal */
+  margin-bottom: 10px;       /* Espaçamento inferior */
+}
+
+/* Parágrafos e listas */
+.terms p, .terms ul {
+  color: #cccccc;            /* Texto secundário */
+  margin-bottom: 15px;       /* Espaçamento inferior */
+}
+
+.terms ul li {
+  list-style: disc;          /* Estilo de marcador da lista */
+  margin-left: 20px;         /* Indentação da lista */
+}
+
+/* Link */
+.terms a {
+  color: #007bff;            /* Azul (acento) */
+  text-decoration: underline; /* Sublinhado */
+}
+
+.terms a:hover {
+  color: #0069d9;            /* Azul mais escuro ao passar o mouse */
+}

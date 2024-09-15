@@ -11,6 +11,7 @@ export default function Skills({ skills, title, onShowMore, showMoreButton }: Sk
 
       <p className="flex justify-center items-center gap-2 flex-wrap" itemProp="knowsAbout">
         {skills.map(({ icon, alt }) => <Badge
+          key={icon}
           alt={alt || ""}
           src={icon}
         />)}

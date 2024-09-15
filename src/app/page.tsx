@@ -8,8 +8,9 @@ import { useTranslations } from 'next-intl';
 import Background from '@/components/Background';
 
 import profilePic from '../../public/me.png';
-import Badge from '@/components/Badge';
 import { useState } from 'react';
+import I18nButton from '@/components/I18nButton';
+import Skills from '@/components/Skills';
 
 export default function Home() {
 	const [showMoreSkills, setShowMoreSkills] = useState(false)
@@ -19,7 +20,10 @@ export default function Home() {
 		<div className="relative">
 			<Background />
 
+
 			<div className="flex justify-center items-center min-h-screen px-1 absolute top-0 bottom-0 right-0 left-0 z-100">
+				<I18nButton />
+
 				<main
 					itemScope
 					itemType="https://schema.org/Person"
@@ -62,127 +66,126 @@ export default function Home() {
 						</p>
 					</section>
 
-					<section className="max-w-3xl mt-2">
-						<strong className='uppercase'>{t('skillsTitle')}:</strong>
-
-						<p className="flex justify-center items-center gap-2 flex-wrap" itemProp="knowsAbout">
-							<Badge
-								alt="React"
-								src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white"
-							/>
-							<Badge
-								alt="TypeScript"
-								src="https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white"
-							/>
-							<Badge
-								alt="html5"
-								src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"
-							/>
-							<Badge
-								alt="CSS3"
-								src="https://img.shields.io/badge/-CSS3-2965f1?style=flat-square&logo=css3&logoColor=white"
-							/>
-							<Badge
-								alt="Sass"
-								src="https://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=sass&logoColor=white"
-							/>
-							<Badge
-								alt="Styled Components"
-								src="https://img.shields.io/badge/-Styled_Components-db7093?style=flat-square&logo=styled-components&logoColor=white"
-							/>
-							<Badge
-								alt="Redux"
-								src="https://img.shields.io/badge/-Redux-764ABC?style=flat-square&logo=redux&logoColor=white"
-							/>
-							<Badge
-								alt="React Redux"
-								src="https://img.shields.io/badge/-React_Redux-764abc?style=flat-square&logo=react&logoColor=white"
-							/>
-							<Badge
-								alt="Rest API"
-								src="https://img.shields.io/badge/-Rest_API-8ab4f8?style=flat-square&logo=javascript&logoColor=white"
-							/>
-							<Badge
-								alt="git"
-								src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"
-							/>
-							<Badge
-								alt="Prettier"
-								src="https://img.shields.io/badge/-Prettier-c596c7?style=flat-square&logo=prettier&logoColor=white"
-							/>
-							<Badge
-								alt="Eslint"
-								src="https://img.shields.io/badge/-Eslint-4b32c3?style=flat-square&logo=eslint&logoColor=white"
-							/>
-							<Badge
-								alt="Nodejs"
-								src="https://img.shields.io/badge/-Nodejs-43853d?style=flat-square&logo=Node.js&logoColor=white"
-							/>
-							<Badge
-								alt="Playwright"
-								src="https://img.shields.io/badge/-Playwright-04c38e?style=flat-square&logo=airplayvideo&logoColor=white"
-							/>
-							<Badge
-								alt="BiomeJS"
-								src="https://img.shields.io/badge/-BiomeJS-60a5fa?style=flat-square&logo=biome&logoColor=white"
-							/>
-							<Badge
-								alt="Tailwind"
-								src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"
-							/>
-
-							{!showMoreSkills && <span onClick={() => setShowMoreSkills(true)} className='text-sm underline cursor-pointer'>{t('seeMoreLabel')}...</span>}
-						</p>
-					</section>
+					<Skills
+						title={t('skillsTitle')}
+						onShowMore={() => setShowMoreSkills(true)}
+						showMoreButton={showMoreSkills}
+						skills={[
+							{
+								alt: "React",
+								icon: "https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white"
+							},
+							{
+								alt: "TypeScript",
+								icon: "https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white"
+							},
+							{
+								alt: "html5",
+								icon: "https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"
+							},
+							{
+								alt: "CSS3",
+								icon: "https://img.shields.io/badge/-CSS3-2965f1?style=flat-square&logo=css3&logoColor=white"
+							},
+							{
+								alt: "Sass",
+								icon: "https://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=sass&logoColor=white"
+							},
+							{
+								alt: "Styled Components",
+								icon: "https://img.shields.io/badge/-Styled_Components-db7093?style=flat-square&logo=styled-components&logoColor=white"
+							},
+							{
+								alt: "Redux",
+								icon: "https://img.shields.io/badge/-Redux-764ABC?style=flat-square&logo=redux&logoColor=white"
+							},
+							{
+								alt: "React Redux",
+								icon: "https://img.shields.io/badge/-React_Redux-764abc?style=flat-square&logo=react&logoColor=white"
+							},
+							{
+								alt: "Rest API",
+								icon: "https://img.shields.io/badge/-Rest_API-8ab4f8?style=flat-square&logo=javascript&logoColor=white"
+							},
+							{
+								alt: "git",
+								icon: "https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"
+							},
+							{
+								alt: "Prettier",
+								icon: "https://img.shields.io/badge/-Prettier-c596c7?style=flat-square&logo=prettier&logoColor=white"
+							},
+							{
+								alt: "Eslint",
+								icon: "https://img.shields.io/badge/-Eslint-4b32c3?style=flat-square&logo=eslint&logoColor=white"
+							},
+							{
+								alt: "Nodejs",
+								icon: "https://img.shields.io/badge/-Nodejs-43853d?style=flat-square&logo=Node.js&logoColor=white"
+							},
+							{
+								alt: "Playwright",
+								icon: "https://img.shields.io/badge/-Playwright-04c38e?style=flat-square&logo=airplayvideo&logoColor=white"
+							},
+							{
+								alt: "BiomeJS",
+								icon: "https://img.shields.io/badge/-BiomeJS-60a5fa?style=flat-square&logo=biome&logoColor=white"
+							},
+							{
+								alt: "Tailwind",
+								icon: "https://img.shields.io/badge/-TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"
+							}
+						]}
+					/>
 
 					{showMoreSkills && (
-						<section className="max-w-3xl mt-4">
-							<strong className='uppercase'>{t('moreSkillsTitle')}:</strong>
-
-							<p className="flex justify-center items-center gap-2 flex-wrap" itemProp="knowsAbout">
-								<Badge
-									alt="PHP"
-									src="https://img.shields.io/badge/-PHP-blue?style=flat-square&logo=php&logoColor=white"
-								/>
-								<Badge
-									alt="Bitbucket Pipelines"
-									src="https://img.shields.io/badge/-Bitbucket_Pipelines-0357D1?style=flat-square&logo=bitbucket&logoColor=white"
-								/>
-								<Badge
-									alt="Jest"
-									src="https://img.shields.io/badge/-Jest-df162b?style=flat-square&logo=jest&logoColor=white"
-								/>
-								<Badge
-									alt="Insomnia"
-									src="https://img.shields.io/badge/-Insomnia-5849BE?style=flat-square&logo=insomnia&logoColor=white"
-								/>
-								<Badge
-									alt="Context API"
-									src="https://img.shields.io/badge/-Context_API-5849be?style=flat-square&logo=react&logoColor=white"
-								/>
-								<Badge
-									alt="React Native"
-									src="https://img.shields.io/badge/-React_Native-45b8d8?style=flat-square&logo=react&logoColor=white"
-								/>
-								<Badge
-									alt="Gulp"
-									src="https://img.shields.io/badge/-Gulp-cf4647?style=flat-square&logo=gulp&logoColor=white"
-								/>
-								<Badge
-									alt="ExpressJS"
-									src="https://img.shields.io/badge/-ExpressJS-000000?style=flat-square&logo=express&logoColor=white"
-								/>
-								<Badge
-									alt="Cypress"
-									src="https://img.shields.io/badge/-Cypress-04c38e?style=flat-square&logo=cypress&logoColor=white"
-								/>
-								<Badge
-									alt="Storybook"
-									src="https://img.shields.io/badge/-Storybook-CC6699?style=flat-square&logo=storybook&logoColor=white"
-								/>
-							</p>
-						</section>
+						<Skills
+							title={t('moreSkillsTitle')}
+							skills={[
+								{
+									alt: "PHP",
+									icon: "https://img.shields.io/badge/-PHP-blue?style=flat-square&logo=php&logoColor=white"
+								},
+								{
+									alt: "Bitbucket Pipelines",
+									icon: "https://img.shields.io/badge/-Bitbucket_Pipelines-0357D1?style=flat-square&logo=bitbucket&logoColor=white"
+								},
+								{
+									alt: "Jest",
+									icon: "https://img.shields.io/badge/-Jest-df162b?style=flat-square&logo=jest&logoColor=white"
+								},
+								{
+									alt: "Insomnia",
+									icon: "https://img.shields.io/badge/-Insomnia-5849BE?style=flat-square&logo=insomnia&logoColor=white"
+								},
+								{
+									alt: "Context API",
+									icon: "https://img.shields.io/badge/-Context_API-5849be?style=flat-square&logo=react&logoColor=white"
+								},
+								{
+									alt: "React Native",
+									icon: "https://img.shields.io/badge/-React_Native-45b8d8?style=flat-square&logo=react&logoColor=white"
+								},
+								{
+									alt: "Gulp",
+									icon: "https://img.shields.io/badge/-Gulp-cf4647?style=flat-square&logo=gulp&logoColor=white"
+								},
+								{
+									alt: "ExpressJS",
+									icon: "https://img.shields.io/badge/-ExpressJS-000000?style=flat-square&logo=express&logoColor=white"
+								},
+								{
+									alt: "Cypress",
+									icon: "https://img.shields.io/badge/-Cypress-04c38e?style=flat-square&logo=cypress&logoColor=white"
+								},
+								{
+									alt: "Storybook",
+									icon: "https://img.shields.io/badge/-Storybook-CC6699?style=flat-square&logo=storybook&logoColor=white"
+								}
+							]}
+						/>
 					)}
+
 
 					<section className="max-w-3xl mt-8">
 						<strong>{t('socialsTitle')}:</strong>

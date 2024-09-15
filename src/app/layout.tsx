@@ -1,6 +1,7 @@
 import './globals.css'
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { CookiesProvider } from 'next-client-cookies/server';
 
 export default async function RootLayout({
   children,
@@ -15,7 +16,9 @@ export default async function RootLayout({
       <head />
       <body>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <CookiesProvider>
+            {children}
+          </CookiesProvider>
         </NextIntlClientProvider>
       </body>
     </html>

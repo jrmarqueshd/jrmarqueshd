@@ -1,13 +1,20 @@
+'use client'
+
 import Image from 'next/image';
 import { RiGithubLine } from 'react-icons/ri';
 import { FiLinkedin, FiFacebook, FiInstagram, FiMail } from 'react-icons/fi';
+import { useTranslations } from 'next-intl';
 
 import Background from '@/components/Background';
 
 import profilePic from '../../public/me.png';
 import Badge from '@/components/Badge';
+import { useState } from 'react';
 
 export default function Home() {
+	const [showMoreSkills, setShowMoreSkills] = useState(false)
+	const t = useTranslations('HomePage');
+
 	return (
 		<div className="relative">
 			<Background />
@@ -19,15 +26,15 @@ export default function Home() {
 					className="flex justify-center items-center flex-col text-center text-gray-200"
 				>
 					<div className="hidden-element">
-						<span itemProp="name">Gilmar dos Santos Marques Junior</span>
-						<span itemProp="nationality">Brasileiro</span>
-						<span itemProp="workLocation">Brasil</span>
-						<span itemProp="gender">Homem</span>
-						<span itemProp="worksFor">CWI | Estratégia e Software</span>
-						<span itemProp="worksFor">WeJam – your digital goals</span>
-						<span itemProp="worksFor">Labi Exames – Melhores preços em exames laboratoriais de qualidade</span>
-						<span itemProp="alumniOf">Formado pela Rocketseat · Evolua rápido como a tecnologia.</span>
-						<span itemProp="alumniOf">Anhaguera Educacional de São Bernardo do Campo</span>
+						<span itemProp="name">Gilmar dos Santos Marques Junior</span><br />
+						<span itemProp="nationality">Brasileiro</span><br />
+						<span itemProp="workLocation">Brasil</span><br />
+						<span itemProp="gender">Homem</span><br />
+						<span itemProp="worksFor">CWI | Estratégia e Software</span><br />
+						<span itemProp="worksFor">WeJam – your digital goals</span><br />
+						<span itemProp="worksFor">Labi Exames – Melhores preços em exames laboratoriais de qualidade</span><br />
+						<span itemProp="alumniOf">Formado pela Rocketseat · Evolua rápido como a tecnologia.</span><br />
+						<span itemProp="alumniOf">Anhaguera Educacional de São Bernardo do Campo</span><br />
 					</div>
 
 					<Image
@@ -43,21 +50,20 @@ export default function Home() {
 						</h1>
 
 						<strong className="block text-base mb-4 uppercase" itemProp="jobTitle">
-							Desenvolvedor Front-End Senior
+							{t('jobTitle')}
 						</strong>
 
 						<p className="text-sm mt-0">
-							Sou amante de tecnologia, e adoro estudar coisas novas que surgem no ecossistema de desenvolvimento.
+							{t('introducing')}
 						</p>
 
 						<p className="text-sm mt-0">
-							Também adoro temas que envolvam: música, animes e coisas da infância, vídeo game, novidades sobre
-							programação.
+							{t('introducingComplement')}
 						</p>
 					</section>
 
 					<section className="max-w-3xl mt-2">
-						<strong>Onde mais me destaco:</strong>
+						<strong className='uppercase'>{t('skillsTitle')}:</strong>
 
 						<p className="flex justify-center items-center gap-2 flex-wrap" itemProp="knowsAbout">
 							<Badge
@@ -85,24 +91,8 @@ export default function Home() {
 								src="https://img.shields.io/badge/-Styled_Components-db7093?style=flat-square&logo=styled-components&logoColor=white"
 							/>
 							<Badge
-								alt="Docker"
-								src="https://img.shields.io/badge/-Docker-46a2f1?style=flat-square&logo=docker&logoColor=white"
-							/>
-							<Badge
-								alt="Bitbucket Pipelines"
-								src="https://img.shields.io/badge/-Bitbucket_Pipelines-0357D1?style=flat-square&logo=bitbucket&logoColor=white"
-							/>
-							<Badge
-								alt="Insomnia"
-								src="https://img.shields.io/badge/-Insomnia-5849BE?style=flat-square&logo=insomnia&logoColor=white"
-							/>
-							<Badge
 								alt="Redux"
 								src="https://img.shields.io/badge/-Redux-764ABC?style=flat-square&logo=redux&logoColor=white"
-							/>
-							<Badge
-								alt="Context API"
-								src="https://img.shields.io/badge/-Context_API-5849be?style=flat-square&logo=react&logoColor=white"
 							/>
 							<Badge
 								alt="React Redux"
@@ -117,14 +107,6 @@ export default function Home() {
 								src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"
 							/>
 							<Badge
-								alt="React Native"
-								src="https://img.shields.io/badge/-React_Native-45b8d8?style=flat-square&logo=react&logoColor=white"
-							/>
-							<Badge
-								alt="Gulp"
-								src="https://img.shields.io/badge/-Gulp-cf4647?style=flat-square&logo=gulp&logoColor=white"
-							/>
-							<Badge
 								alt="Prettier"
 								src="https://img.shields.io/badge/-Prettier-c596c7?style=flat-square&logo=prettier&logoColor=white"
 							/>
@@ -137,42 +119,89 @@ export default function Home() {
 								src="https://img.shields.io/badge/-Nodejs-43853d?style=flat-square&logo=Node.js&logoColor=white"
 							/>
 							<Badge
-								alt="Yarn"
-								src="https://img.shields.io/badge/-Yarn-2188b6?style=flat-square&logo=yarn&logoColor=white"
+								alt="Playwright"
+								src="https://img.shields.io/badge/-Playwright-04c38e?style=flat-square&logo=airplayvideo&logoColor=white"
 							/>
 							<Badge
-								alt="Cypress"
-								src="https://img.shields.io/badge/-Cypress-04c38e?style=flat-square&logo=cypress&logoColor=white"
+								alt="BiomeJS"
+								src="https://img.shields.io/badge/-BiomeJS-60a5fa?style=flat-square&logo=biome&logoColor=white"
 							/>
 							<Badge
-								alt="Jest"
-								src="https://img.shields.io/badge/-Jest-df162b?style=flat-square&logo=jest&logoColor=white"
+								alt="Tailwind"
+								src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"
 							/>
-							<Badge
-								alt="Storybook"
-								src="https://img.shields.io/badge/-Storybook-CC6699?style=flat-square&logo=storybook&logoColor=white"
-							/>
+
+							{!showMoreSkills && <span onClick={() => setShowMoreSkills(true)} className='text-sm underline cursor-pointer'>{t('seeMoreLabel')}...</span>}
 						</p>
 					</section>
 
+					{showMoreSkills && (
+						<section className="max-w-3xl mt-4">
+							<strong className='uppercase'>{t('moreSkillsTitle')}:</strong>
+
+							<p className="flex justify-center items-center gap-2 flex-wrap" itemProp="knowsAbout">
+								<Badge
+									alt="PHP"
+									src="https://img.shields.io/badge/-PHP-blue?style=flat-square&logo=php&logoColor=white"
+								/>
+								<Badge
+									alt="Bitbucket Pipelines"
+									src="https://img.shields.io/badge/-Bitbucket_Pipelines-0357D1?style=flat-square&logo=bitbucket&logoColor=white"
+								/>
+								<Badge
+									alt="Jest"
+									src="https://img.shields.io/badge/-Jest-df162b?style=flat-square&logo=jest&logoColor=white"
+								/>
+								<Badge
+									alt="Insomnia"
+									src="https://img.shields.io/badge/-Insomnia-5849BE?style=flat-square&logo=insomnia&logoColor=white"
+								/>
+								<Badge
+									alt="Context API"
+									src="https://img.shields.io/badge/-Context_API-5849be?style=flat-square&logo=react&logoColor=white"
+								/>
+								<Badge
+									alt="React Native"
+									src="https://img.shields.io/badge/-React_Native-45b8d8?style=flat-square&logo=react&logoColor=white"
+								/>
+								<Badge
+									alt="Gulp"
+									src="https://img.shields.io/badge/-Gulp-cf4647?style=flat-square&logo=gulp&logoColor=white"
+								/>
+								<Badge
+									alt="ExpressJS"
+									src="https://img.shields.io/badge/-ExpressJS-000000?style=flat-square&logo=express&logoColor=white"
+								/>
+								<Badge
+									alt="Cypress"
+									src="https://img.shields.io/badge/-Cypress-04c38e?style=flat-square&logo=cypress&logoColor=white"
+								/>
+								<Badge
+									alt="Storybook"
+									src="https://img.shields.io/badge/-Storybook-CC6699?style=flat-square&logo=storybook&logoColor=white"
+								/>
+							</p>
+						</section>
+					)}
+
 					<section className="max-w-3xl mt-8">
-						<strong>Onde me encontrar:</strong>
+						<strong>{t('socialsTitle')}:</strong>
 
 						<div className="flex items-center justify-center gap-2">
 							<a href="https://github.com/jrmarqueshd" target="_blank" rel="noreferrer nooppener">
-								<RiGithubLine />
+								<RiGithubLine title="Github" />
 							</a>
 							<a href="https://www.linkedin.com/in/jrmarqueshd/" target="_blank" rel="noreferrer nooppener">
-								<FiLinkedin />
-							</a>
-							<a href="https://www.facebook.com/jrmarqueshd" target="_blank" rel="noreferrer nooppener">
-								<FiFacebook />
+								<FiLinkedin title="Linkedin" />
 							</a>
 							<a href="https://www.instagram.com/jrmarqueshd" target="_blank" rel="noreferrer nooppener">
-								<FiInstagram />
+								<FiInstagram title="Instagram" />
+							</a>
+							<a href="https://www.facebook.com/jrmarqueshd" target="_blank" rel="noreferrer nooppener">
+								<FiFacebook title="Facebook" />
 							</a>
 							<a itemProp="email" href="mailto:jrmarqueshd@gmail.com" rel="noreferrer nooppener">
-								<FiMail />
+								<FiMail title="email" />
 							</a>
 						</div>
 					</section>

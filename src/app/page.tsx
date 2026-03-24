@@ -194,9 +194,11 @@ export default function Home() {
 							<a href="https://github.com/jrmarqueshd" target="_blank" rel="noreferrer nooppener">
 								<RiGithubLine title="Github" />
 							</a>
+							{/**
 							<a href="https://www.linkedin.com/in/jrmarqueshd/" target="_blank" rel="noreferrer nooppener">
 								<FiLinkedin title="Linkedin" />
 							</a>
+							*/}
 							<a href="https://www.instagram.com/jrmarqueshd" target="_blank" rel="noreferrer nooppener">
 								<FiInstagram title="Instagram" />
 							</a>
